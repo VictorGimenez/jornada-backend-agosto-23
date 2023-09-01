@@ -2,8 +2,9 @@ const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
 // const url = "mongodb://localhost:27017";
-const url = "mongodb://127.0.0.1:27017";
+/* const url = "mongodb://127.0.0.1:27017"; */
 // const url = "mongodb+srv://admin:V90K7ehx2krw7OlM@cluster0.gbnr4oi.mongodb.net";
+const url = "mongodb+srv://victorgimenez:Bhr4UnQUyI9Ez8pY@cluster0.g0i9ylu.mongodb.net";
 const dbName = "jornada-backend-agosto-23";
 const client = new MongoClient(url);
 
@@ -93,7 +94,8 @@ async function main() {
     res.status(204).send();
   });
 
-  app.listen(3000);
+  /* app.listen(3000); */
+  app.listen(process.env.PORT || 3000);
 }
 
 main();
